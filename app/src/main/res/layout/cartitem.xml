@@ -1,0 +1,84 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/_8sdp"
+    android:padding="16dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView_CartList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_12sdp"
+        android:layout_margin="@dimen/_8sdp"
+        android:background="@color/white"
+        android:padding="@dimen/_4sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_4sdp"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:id="@+id/imageView_CartList"
+                android:layout_width="@dimen/_140sdp"
+                android:layout_height="@dimen/_120sdp"
+                android:src="@drawable/login_logo"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/headTextView_cartList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_22sdp"
+                    android:layout_marginBottom="@dimen/_3sdp"
+                    style="@style/CardView.Dark"
+                    android:text="head"/>
+
+                <TextView
+                    android:id="@+id/subheadTextView_cartList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_3sdp"
+                    style="@style/CardView.Dark"
+                    android:text="subHead"/>
+
+                <TextView
+                    android:id="@+id/locationTextView_cartList"
+                    style="@style/CardView.Dark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_3sdp"
+                    android:text="location"
+                    android:textSize="@dimen/_12sdp"
+                    tools:ignore="TextSizeCheck" />
+
+                <TextView
+                    android:id="@+id/ratingTextView_cartList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rating"
+                    android:textSize="@dimen/_10sdp"
+                    tools:ignore="TextSizeCheck" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

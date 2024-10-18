@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/person_image"
+            android:layout_width="155dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/ic_icon_person_filled"
+            app:layout_constraintBottom_toTopOf="@id/person_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Person Name -->
+
+        <!-- Person Age -->
+
+        <TextView
+            android:id="@+id/person_name"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="Person Name"
+            android:textAlignment="center"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Person Location -->
+        <TextView
+            android:id="@+id/person_age"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:textAlignment="center"
+            android:text="age:12"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/person_location"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="Location"
+            android:textAlignment="center"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Orders Layout -->
+        <LinearLayout
+            android:id="@+id/orders_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/person_age"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <!-- Last Order -->
+            <TextView
+                android:id="@+id/last_order"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Last Order"
+                android:textAlignment="center" />
+
+            <!-- Pending Order -->
+            <TextView
+                android:id="@+id/pending_order"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Pending Order"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Person Image -->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

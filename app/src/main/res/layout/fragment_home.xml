@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment">
+
+
+    <ImageView
+        android:id="@+id/imageView_menu"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_margin="@dimen/_12sdp"
+        android:clickable="true"
+        android:foregroundGravity="left"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textView_head"
+        app:srcCompat="@android:drawable/ic_menu_sort_by_size" />
+
+    <ImageView
+        android:id="@+id/imageView_cart"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="@dimen/_12sdp"
+        android:clickable="true"
+        app:layout_constraintBottom_toTopOf="@id/textView_head"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contextClickable="true"
+        app:srcCompat="@drawable/baseline_add_shopping_cart_24" />
+
+    <TextView
+        android:id="@+id/textView_head"
+        style="@style/CardView.Dark"
+        android:layout_width="200dp"
+        android:layout_height="@dimen/_70sdp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/ar_one_sans"
+        android:text="Delicious \nFood for You"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/searchView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.086"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView_menu" />
+
+
+    <com.google.android.material.search.SearchBar
+        android:id="@+id/searchView"
+        android:layout_width="@dimen/_240sdp"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        app:circularflow_radiusInDP="12dp"
+        app:layout_constraintBottom_toTopOf="@id/tabLayout_Home"
+        app:layout_constraintCircleRadius="@dimen/_12sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView_head" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager_Home2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="2dp"
+        android:layout_marginTop="@dimen/_8sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tabLayout_Home" />
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout_Home"
+        android:layout_width="360dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="388dp"
+        android:background="@color/white"
+        app:circularflow_radiusInDP="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/searchView"
+        app:tabGravity="fill"
+        app:tabIndicator="@drawable/tab_indicator"
+        app:tabIndicatorAnimationMode="elastic"
+        app:tabIndicatorColor="@color/white"
+        app:tabIndicatorGravity="center"
+        app:tabMode="fixed"
+        app:tabTextColor="@color/orange"
+        tools:layout_editor_absoluteX="-15dp">
+
+    </com.google.android.material.tabs.TabLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
